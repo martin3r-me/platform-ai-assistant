@@ -88,10 +88,7 @@
                     <x-ui-input-select
                         name="assistant.response_format"
                         label="Response Format"
-                        :options="collect([
-                            ['id' => 'auto', 'name' => 'Auto'],
-                            ['id' => 'json_object', 'name' => 'JSON Object']
-                        ])"
+                        :options="$responseFormatOptions"
                         optionValue="id"
                         optionLabel="name"
                         wire:model.live="assistant.response_format"

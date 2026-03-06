@@ -31,13 +31,17 @@ return [
     | OpenAI API settings for the AI Assistant module.
     |
     */
+    'openai_api_key' => env('OPENAI_API_KEY'),
+    'openai_organization' => env('OPENAI_ORGANIZATION'),
+    'assistant_id' => env('OPENAI_ASSISTANT_ID'),
+    
     'openai' => [
         'api_key' => env('OPENAI_API_KEY'),
         'organization' => env('OPENAI_ORGANIZATION'),
         'base_url' => env('OPENAI_BASE_URL', 'https://api.openai.com/v1'),
         
         // Default model settings
-        'default_model' => env('OPENAI_DEFAULT_MODEL', 'gpt-5-mini'),
+        'default_model' => env('OPENAI_DEFAULT_MODEL', 'gpt-4o-mini'),
         'fallback_model' => env('OPENAI_FALLBACK_MODEL', 'gpt-4o-mini'),
         
         // Model sync settings
