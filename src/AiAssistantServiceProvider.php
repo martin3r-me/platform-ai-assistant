@@ -44,6 +44,7 @@ class AiAssistantServiceProvider extends ServiceProvider
             PlatformCore::registerModule([
                 'key'        => 'ai-assistant',
                 'title'      => 'AI Assistant',
+                'group'      => 'tools',
                 'routing'    => config('ai-assistant.routing'),
                 'guard'      => config('ai-assistant.guard'),
                 'navigation' => config('ai-assistant.navigation'),
