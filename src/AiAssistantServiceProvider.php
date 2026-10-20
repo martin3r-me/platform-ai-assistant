@@ -3,7 +3,6 @@
 namespace Platform\AiAssistant;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Livewire\Livewire;
 use Platform\Core\PlatformCore;
@@ -39,7 +38,7 @@ class AiAssistantServiceProvider extends ServiceProvider
         if (
             config()->has('ai-assistant.routing') &&
             config()->has('ai-assistant.navigation') &&
-            Schema::hasTable('modules')
+            PlatformCore::modulesTableExists()
         ) {
             PlatformCore::registerModule([
                 'key'        => 'ai-assistant',
